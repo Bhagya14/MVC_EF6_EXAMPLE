@@ -1,0 +1,71 @@
+﻿@model MVC_EF6_Example.Models.CustomerModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Find</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div align="center">
+        <h4>CustomerModel</h4>
+        <hr />
+        <dl class="dl-horizontal" style="width:50%;text-align:left;">
+            <dt>
+                @Html.DisplayNameFor(model => model.customername)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.customername)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.customerpassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.customerpassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.customercity)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.customercity)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.customeremailid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.customeremailid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.customerdetails)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.customerdetails)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", "Home", new { id = Model.customerid }, null)
+        @Html.ActionLink("Delete", "Delete", "Home", new { id = Model.customerid }, null)
+    </p>
+</body>
+</html>
